@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Techgeeks dev company</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/jpg" href="pic 34.jpg">
+  <style>
+    /* body style */
+    body {
+  font: 400 15px Lato;
+  line-height: 1.8;
+  color: #818181;
+}
+    /*jumbotron style*/
+      .jumbotron 
+      {
+          background-color: #ade3e7; 
+          color: #04080a;
+          padding: 100px 25px;
+        }
+        /*company details style*/
+        bg-grey
+         {
+  background-color: #f6f6f6;
+         }
+         .container-fluid 
+         {
+  padding: 60px 50px; /*seperates the contents at specified margin*/
+         }
+         .logo {
+  font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+/* color for all icons and their font-size */
+.logo-small {
+  color: #ece8e7;
+  font-size: 50px;
+}
+
+.logo {
+  color: #f7f0ee;
+  font-size: 200px;
+}
+/* portfolio styling */
+.thumbnail {
+  padding: 0 0 15px 0;
+  border: none;
+  border-radius: 0;
+}
+
+.thumbnail img {
+  width: 400px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+/* styling the customer  responses*/
+.carousel-control.right, .carousel-control.left {
+  background-image: none;
+  color: #f5f0ee;
+}
+
+.carousel-indicators li {
+  border-color: #f0ebea;
+}
+
+.carousel-indicators li.active {
+  background-color: #e9e3e2;
+}
+
+.item h4 {
+  font-size: 19px;
+  line-height: 1.375em;
+  font-weight: 400;
+  font-style: italic;
+  margin: 70px 0;
+}
+
+.item span {
+  font-style: normal;
+}
+/* styling the navigation bar */
+.navbar {
+  margin-bottom: 0;
+  background-color: #e3f2f8;
+  z-index: 9999;
+  border: 0;
+  font-size: 20px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #110f0f !important;
+}
+/* When scrolling */
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #f5aca7 !important;
+  background-color: #0c0c0c !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+/* footer styling */
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #f4511e;
+}
+/* Footer styles */
+footer {
+  background-color: #f9f9f9;
+  padding: 20px 0;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-block {
+  flex-basis: 50%;
+  margin-bottom: 20px;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+  /* The name of the animation */
+  animation-name: slide;
+  -webkit-animation-name: slide;
+  /* The duration of the animation */
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  /* Make the element visible */
+  visibility: visible;
+}
+/* Slide animation */
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust the distance from the bottom as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  z-index: 9999; /* Ensure it appears above other elements */
+}
+
+.whatsapp-icon img {
+  width: 100px; /* Adjust the icon size as needed */
+  height: auto;
+  border-radius: 20px;
+}
+  </style>
+</head>
+   <!--This is Jumbotron, a big box-->
+<div class="jumbotron text-center">
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--Navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#myPage"><img src="pic 34.jpg" width="50px" height="40px" style="border-radius:50%;"></image></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>           
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Body-->
+   <h1>TECKGEEKS  web dev Company</h1>
+<p>Where agriculture means life</p>
+<form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger"><a href="https://api.whatsapp.com/send?phone=+254746822561&text=Hello Teckgeeks">Subscribe</a></button>
+      </div>
+    </div>
+  </form>
+  <!--About-->
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>Techgeeks dev</h2>
+        <h4>TECHGEEKs is a agriculture company</h4>
+        <p style="text-align:justify;">Teckgeeks Dev Company is a forward-thinking agricultural technology company dedicated to revolutionizing the way agriculture is practiced and managed. At Teckgeeks, we believe that technological innovation holds the key to addressing the complex challenges facing modern agriculture, from increasing food demand to sustainability and environmental conservation.</p>
+        <button class="btn btn-default btn-lg">
+          <a href="https://api.whatsapp.com/send?phone=+254746822561&text=Hello Techgeeks">
+            Get In Touch
+        </a>
+      </button>
+    </div>
+      <div class="col-sm-4">
+        <span><image src="pic 35.jpg" width="80%" height="30%"></image></span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+       <span></span>
+      </div>
+      <div class="col-sm-8">
+        <h2><strong>Our Values</strong></h2>
+        <p><strong>Satisfaction:</strong> Fulfilling the needs and ensuring the quality of service to the expectations of our customers and beyond.</p>
+        <p><strong>Excellence:</strong> Strive for the highest quality  agriculture in every aspect of our life.</p>
+        <p><strong>Integrity:</strong> Conduct business with honesty, transparency, and ethical practices to ensure that our customers are fully satisfied.</p>
+        <h4><strong>MISSION:</strong></h4>
+        <p style="text-align: justify;">
+          </p>Our mission at Teckgeeks Dev Company is to empower farmers and agricultural stakeholders with cutting-edge technological solutions that enhance productivity, optimize resource utilization, and promote sustainable farming practices. We are committed to leveraging the latest advancements in technology, including artificial intelligence, data analytics, Internet of Things (IoT), and automation, to drive positive transformation across the agricultural landscape. 
+        <p><strong>VISION:</strong></p>
+        <p style="text-align: justify;">
+          Vision Statement:
+
+"At Teckgeeks Dev Company, we envision a future where technology revolutionizes agriculture, making it more efficient, sustainable, and environmentally friendly. Our goal is to empower farmers with innovative tools and insights, ensuring they can produce more food while conserving resources and protecting the planet. We are committed to leading the way in transforming agriculture for the betterment of society and the environment."</p>
+      </div>
+    </div>
+  </div>
+ <!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+    <h2>SERVICES</h2>
+    <h4>What we offer</h4>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-tasks"> <strong>Educating  farners</strong></span>
+        <h4>providing digitalized solutions </h4>
+        <p style="text-align: justify;">Teckgeeks Dev Company is dedicated to empowering farmers through education and digitalized solutions. We provide comprehensive education and training programs to enhance farmers' digital literacy and understanding of modern agricultural practices. Through on-site workshops, demonstrations, and online resources such as webinars and video tutorials, we offer practical guidance on utilizing farm management software, implementing precision agriculture techniques, and adopting sustainable farming practices. By collaborating with agricultural extension services and government agencies, we ensure our educational initiatives reach farmers in rural and remote areas. Our digital solutions are tailored to the diverse needs of farmers, from small-scale subsistence farmers to large-scale commercial operations. We provide continuous support and feedback mechanisms, enabling farmers to maximize the benefits of technology and improve their productivity while enhancing the sustainability of their operations. </p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-cutlery"> <strong>OUR APPROACH TO AGRICULTURE</strong></span>
+        <h4>our approach</h4>
+        <p style="text-align: justify;">At Teckgeeks Dev Company, we harness technology to optimize farming practices, maximize yields, and promote sustainability. Through precision agriculture and digital farm management solutions, we empower farmers to make informed decisions and streamline operations. We prioritize environmental stewardship with smart irrigation systems and ensure supply chain transparency using blockchain technology. Collaboration is key as we work with farmers and industry partners to drive innovation and create a more sustainable future for agriculture.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-th"> <strong>TECHNOLOGY</strong></span>
+        <h4>mechanisms we use to enhance technology</h4>
+        <p style="text-align: justify;">At Teckgeeks Dev Company, we employ a multifaceted approach to enhance technology in agriculture. Through extensive research and development efforts, we continuously explore emerging technologies and develop innovative solutions tailored to agricultural needs. Collaborating with technology companies, research institutions, and agricultural organizations allows us to leverage expertise and resources, accelerating the development and adoption of cutting-edge technologies. We prioritize continuous improvement, refining our solutions based on feedback from farmers and stakeholders to ensure reliability and effectiveness. Our user-centric design principles ensure that our technologies are intuitive and accessible to farmers of all skill levels, supported by comprehensive training and education programs. With scalability and adaptability at the forefront, our technologies are designed to meet the evolving needs of agricultural operations, from small family farms to large commercial enterprises. Through these mechanisms, we remain committed to driving positive change and innovation in the agricultural sector.</p>
+      </div>
+      </div>
+      <br><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-leaf"><strong> EXCELLENCE</strong></span>
+        <h4>Priotizing Excellence</h4>
+        <p style="text-align: justify;">At Teckgeeks Dev Company, we prioritize excellence in every aspect of our operations. From research and development to customer service, we strive for the highest standards of quality, innovation, and reliability. Our team of dedicated professionals is committed to pushing the boundaries of what's possible in agricultural technology, ensuring that our solutions deliver exceptional value to our customers. Through continuous improvement, rigorous testing, and a relentless pursuit of excellence, we aim to exceed expectations and drive positive change in the agricultural industry.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-certificate"> <strong>CERTIFIED</strong></span>
+        <h4>Trained and Attentive Staff and best technology present</h4>
+        <p style="text-align: justify;">At Teckgeeks Dev Company, we're certified experts in agricultural technology. Our team holds industry-recognized certifications, ensuring top-quality solutions. We adhere to rigorous standards, providing farmers with innovative and reliable tools to thrive in modern agriculture.</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-wrench"><strong> DELIVERY</strong></span>
+        <h4>HARD WORK</h4>
+        <p style="text-align: justify;">At Teckgeeks Dev Company, we focus on efficient, reliable delivery to ensure farmers receive the tools and support they need when they need them. Through streamlined processes and open communication, we meet deadlines consistently, building trust and supporting agricultural success.</p>
+      </div>
+    </div>
+  </div>
+  <!--Company's portfolio-->
+  <div id="portfolio" class="container-fluid text-center bg-grey">
+    <h4>What we offer</h4>
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="pic 31.jpg" alt="education">
+          <p><strong><a href="education.html">education</a></strong></p>
+          <p>knowledge for you</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+           <img src="pic 32.jpg" alt="maize seedlings">
+           </div>
+      <h2>What our clients say</h2>
+      <div class="slideanim">
+<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+    </div>
+    <div class="item">
+      <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+    </div>
+    <div class="item">
+      <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </div>
+</div>
+  <div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Nairobi, Kenya</p>
+        <p><span class="glyphicon glyphicon-phone"></span> +254 746822561</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:techgeekscompany@gmail.com">Email</a></p>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid text-center">
+    <div class="footer">
+      <div class="flex-container">
+        <div class="text-block">
+          <p style="font-size: 30px;">Consider us for:</p>
+          <ul style="text-align: center;">
+            <li>Workshop functions.</li>
+            <li>sampling activities.</li>
+            <li>offering more advanced farming technologies.</li>
+            <li>Corporate Functions.</li>
+            <li>linking farmers to credit services.</li>
+          </ul>
+        </div>
+        
+      </div>
+      </div>
+    <a href="#myPage" title="To Top">
+      <span> Back to top</span>
+    </a>
+    <p>Developed by <a href="mailto:techgeeks@gmail.com" title="Developer">Techgeeks dev company</a></p>
+    <p style="text-align: center;">&copy;2024. All rights reserved.</p>
+</div>
+</div>
+</footer>
+ <script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  
+     // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+  
+      // Prevent default anchor click behavior
+      event.preventDefault();
+  
+      // Store hash
+      var hash = this.hash;
+  
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+  
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+        });
+      } // End if
+    });
+  })
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+  
+      var winTop = $(window).scrollTop();
+      if (pos < winTop + 600) {
+        $(this).addClass("slide");
+      }
+    });
+  });
+  </script>
+    </body>
+  </html>
